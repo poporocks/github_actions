@@ -19,12 +19,9 @@ jobs:
       - name: Read file
         run: cat hola.txt
 
-      - name: Update OS
-        run: apt update -y
-
   other:
     runs-on: ubuntu-latest
-
+    needs: [hola]
     steps:
       - name: LS
         run: ls -la
