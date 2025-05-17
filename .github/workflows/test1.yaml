@@ -1,6 +1,6 @@
 name: Hola Mundo
 
-on: [oush]
+on: [push]
 
 jobs:
   hola:
