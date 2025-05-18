@@ -11,4 +11,6 @@ jobs:
 
     steps:
       - name: Test
-        run: echo "$MY_VAR"
+        env:
+          STEP_MY_VAR: Mi variable de entorno 2
+        run: echo "$STEP_MY_VAR"
