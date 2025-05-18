@@ -12,3 +12,5 @@ jobs:
 
       - name: remote-action
         uses: ./.github/actions/my-action
+        with:
+          message: "Hola, imbecil!"
