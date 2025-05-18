@@ -12,3 +12,6 @@ jobs:
     steps:
       - name: Test
         run: echo "${{ vars.MY_VAR_CONFIG }}"
+
+      - name: Secret
+        run: echo "${{ secret.MY_SECRET }}"
