@@ -3,47 +3,12 @@ name: Test
 on: [push]
 
 jobs:
-  hola:
-    runs-on: ubuntu-latest
-    
-    steps:
-      - name: Hola Mundo
-        run: echo "Hola mundo"
-
-      - name: touch file
-        run: touch hola.txt
-      
-      - name: Set text
-        run: echo "hola mundo" >> hola.txt
-
-      - name: Read file
-        run: cat hola.txt
-        
-  other:
+  local-action:
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout
         uses: actions/checkout@v4.2.2
 
-      - name: ls
-        run: ls -lhtra
-      
-      - name: Setup Node.js environment
-        uses: actions/setup-node@v4.4.0
-        with:
-          node-version: latest
-
-      - name: node version
-        run: node --version
-
-      #- name: Install
-      #  run: npm install express
-
-      - name: Setup PHP Action
-        uses: shivammathur/setup-php@2.33.0
-        with:
-          php-version: '8.3'
-
-      - name: php version
-        run: php --version
+      - name: remote-action
+        uses: ./.github/actions/my-action
