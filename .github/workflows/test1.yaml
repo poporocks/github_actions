@@ -14,4 +14,4 @@ jobs:
         run: echo "${{ vars.MY_VAR_CONFIG }}"
 
       - name: Secret
-        run: echo "${{ secret.MY_SECRET }}"
+        run: echo "${{ secrets.MY_SECRET }}"
