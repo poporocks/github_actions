@@ -11,6 +11,4 @@ jobs:
 
     steps:
       - name: Test
-        env:
-          STEP_MY_VAR: Mi variable de entorno 2
-        run: echo "$STEP_MY_VAR"
+        run: echo "${{ vars.MY_VAR_CONFIG }}"
