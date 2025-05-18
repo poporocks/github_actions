@@ -8,4 +8,6 @@ jobs:
 
     steps:
       - name: ls
-        run: ls -lhtra
+        run: |
+          echo "Hola Mundo" >> hola.txt
+          cat hola.txt
