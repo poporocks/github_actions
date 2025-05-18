@@ -31,6 +31,19 @@ jobs:
       
       - name: Setup Node.js environment
         uses: actions/setup-node@v4.4.0
+        with:
+          node-version: lastest
 
       - name: node version
         run: node --version
+
+      #- name: Install
+      #  run: npm install express
+
+      - name: Setup PHP Action
+        uses: shivammathur/setup-php@2.33.0
+        with:
+          php-version: '8.3'
+
+      - name: php version
+        run: php --version
