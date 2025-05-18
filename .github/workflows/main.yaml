@@ -3,7 +3,23 @@ name: Test
 on: [push]
 
 jobs:
-  test-build:
+  hola:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Hola Mundo
+        run: echo "Hola mundo"
+
+      - name: touch file
+        run: touch hola.txt
+      
+      - name: Set text
+        run: echo "hola mundo" >> hola.txt
+
+      - name: Read file
+        run: cat hola.txt
+        
+  other:
     runs-on: ubuntu-latest
 
     steps:
@@ -11,6 +27,10 @@ jobs:
         uses: actions/checkout@v4.2.2
 
       - name: ls
-        run: |
-          chmod +x script.sh
-          ./script.sh
+        run: ls -lhtra
+      
+      - name: Setup Node.js environment
+        uses: actions/setup-node@v4.4.0
+
+      - name: node version
+        run: node --version
